@@ -1,0 +1,18 @@
+<tabs>
+    <tab
+        icon="@drawable/ic_home_black_24dp"
+        id="@+id/tab_home"
+        title="خانه" />
+    <tab
+        icon="@drawable/ic_featured_play_list_black_24dp"
+        id="@+id/tab_read_cards"
+        title="مرور" />
+    <tab
+        icon="@drawable/ic_playlist_add_check_black_24dp"
+        id="@+id/tab_select_cards"
+        title="انتخاب کارت" />
+    <tab
+        icon="@drawable/ic_shopping_cart_black_24dp"
+        id="@+id/tab_shopping"
+        title="فروشگاه" />
+</tabs>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ir.fekrafarinan.yademman.Leitner.Activities.CardActivity">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/progressBarWrongAnswers"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            app:rcBackgroundColor="#3c3a3b"
+            app:rcProgressColor="#D24D57"
+            app:rcRadius="7dp"
+            app:rcReverse="true" />
+
+        <TextView
+            android:id="@+id/txtAllCardsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
+            android:gravity="center"
+            android:minWidth="30dp" />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/progressBarCorrectAnswers"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            app:rcBackgroundColor="#3c3a3b"
+            app:rcProgressColor="#26A65B"
+            app:rcRadius="7dp"
+            app:rcReverse="false" />
+    </LinearLayout>
+
+    <ViewSwitcher
+        android:id="@+id/switcherCardTest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+
+                <TextView
+                    android:id="@+id/txtQuestionTestCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnTestCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.25"
+                            android:background="@android:color/transparent"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                            android:paddingEnd="5dp" />
+
+                        <Button
+                            android:id="@+id/btnTestCard2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="0.25"
+                            android:background="@android:color/transparent"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                            android:paddingEnd="5dp" />
+
+                        <Button
+                            android:id="@+id/btnTestCard3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="0.25"
+                            android:background="@android:color/transparent"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                            android:paddingEnd="5dp" />
+
+                        <Button
+                            android:id="@+id/btnTestCard4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="0.25"
+                            android:background="@android:color/transparent"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                            android:paddingEnd="5dp" />
+
+                    </LinearLayout>
+                </ScrollView>
+                <Button
+                    android:id="@+id/btnShowNextCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button_select_lesson"
+                    android:drawableStart="@drawable/ic_visibility_white_24dp"
+                    android:padding="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/showNextCard"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <ViewFlipper
+                android:id="@+id/cardFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <ViewSwitcher
+                        android:id="@+id/switcherQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/txtQuestionCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:maxLines="10"
+                            android:scrollbars="vertical"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtQuestionCardWithImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                            <ImageView
+                                android:id="@+id/imgQuestion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/question_image"
+                                android:scaleType="fitXY" />
+
+                        </LinearLayout>
+
+
+                    </ViewSwitcher>
+
+                    <Button
+                        android:id="@+id/btnShowAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_button_select_lesson"
+                        android:drawableStart="@drawable/ic_visibility_white_24dp"
+                        android:padding="15dp"
+                        android:text="@string/showAnswer"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+
+                    <ImageButton
+                        android:id="@+id/btnWrongAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/description_wrong_answer"
+                        android:src="@drawable/ic_cancel_white_48dp"
+                        android:tint="@color/colorAccent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.467"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btnCorrectAnswer" />
+
+                    <ImageButton
+                        android:id="@+id/btnCorrectAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/description_correct_answer"
+                        android:src="@drawable/ic_check_circle_white_48dp"
+                        android:tint="@color/darkGreen"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/btnWrongAnswer"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <ViewSwitcher
+                        android:id="@+id/switcherAnswer"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/btnWrongAnswer"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/txtAnswerCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:maxLines="10"
+                            android:scrollbars="vertical"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtAnswerCardWithImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:maxLines="3"
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                            <ImageView
+                                android:id="@+id/imgAnswer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/answer_image"
+                                android:scaleType="fitXY" />
+
+                        </LinearLayout>
+
+                        <!--<VideoView
+                            android:id="@+id/videoAnswer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp" />-->
+                    </ViewSwitcher>
+                </android.support.constraint.ConstraintLayout>
+            </ViewFlipper>
+        </android.support.v7.widget.CardView>
+
+
+    </ViewSwitcher>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2a2a2a"
+        app:bb_activeTabColor="#ffba26"
+        app:bb_inActiveTabColor="#C3C3C3"
+        app:bb_tabXmlResource="@xml/botoombar_tabs" />
+</LinearLayout>
