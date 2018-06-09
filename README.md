@@ -14,6 +14,6 @@ You can see Server code in [this link](https://github.com/M-amin-s/Yademan-Serve
 
 * Mohammad Amin Salarkia: Scrum-master and Android Developer
 * Amir Sedeh: Android and java Developer
-* Amirhosain Mehdi Nejad: Web-master and back-end and front-end web Developer
+* Amirhossein Mahdinejad: Web-master and back-end and front-end web Developer
 * Mohammad Tabe Emam: Ui/Ux Designer and Android Developer
 * Mahdi Ghanbari: Database-master and back-end Developer
